@@ -21,8 +21,6 @@ class _CampaignDetailPageState extends State<CampaignDetailPage> {
   void initState() {
     getCampaignAPI();
     super.initState();
-    int dt = _campaignResponse.endTime ?? -_campaignResponse.startTime!;
-    dateRange = Duration(milliseconds: dt).inDays;
   }
 
   @override
@@ -59,7 +57,7 @@ class _CampaignDetailPageState extends State<CampaignDetailPage> {
                   ),
                 ),
                 Text(
-                  dateRange,
+                  '20 days left',
                   style: TextStyle(fontSize: 15, color: Colors.grey),
                 )
               ]),
